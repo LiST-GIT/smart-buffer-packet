@@ -79,6 +79,7 @@ export class PacketContainer {
             ].join( '\n' ) );
             this[ name ] = new ( { [ name ]: class extends Packet { encode = encode; decode = decode; } } )[ name ]( this );
         }
+        return this;
     }
     int8 = new class Packet { encode = ( buffer, value ) => buffer.writeInt8( value ); decode = ( buffer ) => buffer.readInt8() };
     uint8 = new class Packet { encode = ( buffer, value ) => buffer.writeUInt8( value ); decode = ( buffer ) => buffer.readUInt8() };

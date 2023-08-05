@@ -1,6 +1,6 @@
 {
   "name": "smart-buffer-packet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "binary parsers and serializers",
   "type": "module",
   "main": "./index.mjs",
