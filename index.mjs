@@ -14,7 +14,7 @@ export class PacketContainer {
             const encode = new Function( 'buffer', 'value', [
                 util.format( 'const [ isEncode, isDecode ] = [ true, false ];' ),
                 util.format( 'try {' ),
-                pseudoCode.replace( /^(\s+)(.+?):(.+?)(\[(.+?)\]|)$/mg, ( all, white, name, type, none, sizeType ) => {
+                pseudoCode.replace( /^(\s*)(.+?):(.+?)(\[(.+?)\]|)$/mg, ( all, white, name, type, none, sizeType ) => {
                     if ( sizeType ) {
                         return [
                             util.format( '%s{', white ),
